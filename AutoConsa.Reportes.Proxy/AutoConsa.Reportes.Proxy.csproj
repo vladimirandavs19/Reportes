@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50635385-62AD-48DF-9C32-633C631C090A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoConsa.Reportes.Proxy</RootNamespace>
+    <AssemblyName>AutoConsa.Reportes.Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARP_Catalogo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CatalogoSiacWebEA\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CatalogoSiacWeb\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.ConsultarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.DatosDocumentos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.Documento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.EjecutaSPVariosRetornosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.InsertarStickerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.ItemGenerico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.IVA5_PORC_IVA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.ListaNegocio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.PARAMETRO_RESPUESTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.RESPUESTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.seg_usuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_AGENCIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CAJA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CAMP_REPO_REPU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CATEGORIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CENT_COST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CLIENTE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_CLIE_CANA_CONT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_DETA_DIAR_TIPO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_EMPRESA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_EMPRESA_XML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_MODELO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_NOTA_DEBI_VENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PLAN_CONT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PROC_EXCE_SERV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PROF_REPU_SERV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PROVEEDOR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PROVEEDOR_DIAS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_PROVEEDOR_DIAS_NOMBRE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_STICKER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_SUCURSAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_TECNICO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_TIPO_DOCU_DIGI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_TORR_CONT_SERV.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_UBIC_GEOG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_UBIC_GEOG_SECT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SI_V_CLIE_EXPO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.SP_CONSULTAR_EVALUACION_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.sp_llena_cliente_crm3_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.sp_llena_cliente_crm4_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.sp_llena_cliente_crm_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\AutoConsa.Reportes.Proxy.CatalogoSiacWebEA.tm_clientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo.wsdl" />
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.ConsultarClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.DatosDocumentos.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.Documento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.EjecutaSPVariosRetornosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.InsertarStickerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.IVA5_PORC_IVA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.PARAMETRO_RESPUESTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.RESPUESTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.seg_usuarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_AGENCIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CAJA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CAMP_REPO_REPU.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CATEGORIA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CENT_COST.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CLIENTE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_CLIE_CANA_CONT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_DETA_DIAR_TIPO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_EMPRESA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_EMPRESA_XML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_MODELO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_NOTA_DEBI_VENT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_PLAN_CONT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_PROVEEDOR.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_PROVEEDOR_DIAS.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_PROVEEDOR_DIAS_NOMBRE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_STICKER.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_SUCURSAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_TECNICO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_TIPO_DOCU_DIGI.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_UBIC_GEOG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_UBIC_GEOG_SECT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.SI_V_CLIE_EXPO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.sp_llena_cliente_crm3_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.sp_llena_cliente_crm4_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.sp_llena_cliente_crm_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\AutoConsa.Reportes.Proxy.CatalogoSiacWeb.tm_clientes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo.wsdl" />
+    <None Include="Service References\CatalogoSiacWeb\Catalogo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CatalogoSiacWebEA\" />
+    <WCFMetadataStorage Include="Service References\CatalogoSiacWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWeb\Catalogo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWeb\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWeb\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWeb\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWebEA\Catalogo.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWebEA\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWebEA\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CatalogoSiacWebEA\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

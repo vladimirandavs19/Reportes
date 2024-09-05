@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" />
+  <xs:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:element name="InsertarProveedorDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoProveedorDias" nillable="true" type="q1:SI_PROVEEDOR_DIAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarProveedorDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="InsertarProveedorDiasResult" nillable="true" type="q2:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoProveedorDias" nillable="true" type="q3:SI_PROVEEDOR_DIAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ActualizarProveedorDiasResult" nillable="true" type="q4:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pvNombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorDiasResult" nillable="true" type="q5:SI_PROVEEDOR_DIAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pvNombre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ObtenerProveedorResult" nillable="true" type="q6:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCedRuc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pvCedRuc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCedRucResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ObtenerCedRucResult" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDiasNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDiasNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorDiasNombreResult" nillable="true" type="q8:SI_PROVEEDOR_DIAS_NOMBRE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDiasIdentificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="identificacionProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorDiasIdentificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorDiasIdentificacionResult" nillable="true" type="q9:SI_PROVEEDOR_DIAS_NOMBRE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListaProveedorDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identificacionProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListaProveedorDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerListaProveedorDiasResult" nillable="true" type="q10:ArrayOfSI_PROVEEDOR_DIAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorIdentificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="identificacionProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorIdentificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorIdentificacionResult" nillable="true" type="q11:SI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneProveedorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtieneProveedorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtieneProveedorNombreResult" nillable="true" type="q12:SI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProveedorPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoPrincipal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProveedorPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarProveedorPorCodigoResult" nillable="true" type="q13:SI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasXml">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerEmpresasXmlResult" nillable="true" type="q14:ArrayOfSI_EMPRESA_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasXmlPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoEmpresaXml" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpresasXmlPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerEmpresasXmlPorCodigoResult" nillable="true" type="q15:SI_EMPRESA_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRegistro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoEmpresaXml" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRegistroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="EliminaRegistroResult" nillable="true" type="q16:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaRegistro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObjEmpresaXml" nillable="true" type="q17:SI_EMPRESA_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizaRegistroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ActualizaRegistroResult" nillable="true" type="q18:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertaRegistro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoEmpresaXml" nillable="true" type="q19:SI_EMPRESA_XML" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertaRegistroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="InsertaRegistroResult" nillable="true" type="q20:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorPorIdentificacionNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreProveedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identificacionProveedor" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorPorIdentificacionNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorPorIdentificacionNombreResult" nillable="true" type="q21:ArrayOfSI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoProveedor" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProveedorPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerProveedorPorCodigoResult" nillable="true" type="q22:SI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerClientePorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCliente" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerClientePorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerClientePorCodigoResult" nillable="true" type="q23:SI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerClientePorIdentificacionNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identificacionCliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerClientePorIdentificacionNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerClientePorIdentificacionNombreResult" nillable="true" type="q24:ArrayOfSI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoRespuesta" nillable="true" type="q25:RESPUESTA" />
+        <xs:element minOccurs="0" name="tipoCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoCliente" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombreCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identificacionCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sg_codigo" nillable="true" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarClienteResult" nillable="true" type="q26:ArrayOfSI_CLIENTE" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoRespuesta" nillable="true" type="q27:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerExportador">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerExportadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ObtenerExportadorResult" nillable="true" type="q28:ArrayOfSI_V_CLIE_EXPO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarClienteExportador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoClienteExportador" nillable="true" type="q29:SI_CLIE_EXPO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarClienteExportadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="InsertarClienteExportadorResult" nillable="true" type="q30:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarClienteExportador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoClietneExportador" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarClienteExportadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="EliminarClienteExportadorResult" nillable="true" type="q31:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarProveedorDias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoPrincipal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarProveedorDiasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="EliminarProveedorDiasResult" nillable="true" type="q32:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoProveedor" nillable="true" type="q33:SI_PROVEEDOR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ActualizarProveedorResult" nillable="true" type="q34:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAgencia">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarAgenciaResult" nillable="true" type="q35:ArrayOfSI_AGENCIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProveedorDiasPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoPrincipal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProveedorDiasPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarProveedorDiasPorCodigoResult" nillable="true" type="q36:SI_PROVEEDOR_DIAS" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCajaPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cajaVirtual" nillable="true" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCajaPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarCajaPorAgenciaResult" nillable="true" type="q37:ArrayOfSI_CAJA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCentroCosto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="accesorio" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCentroCostoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarCentroCostoResult" nillable="true" type="q38:ArrayOfSI_CENT_COST" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosGenerales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoTipo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosGeneralesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarParametrosGeneralesResult" nillable="true" type="q39:ArrayOfSI_CAMP_REPO_REPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTipoDocumentoDigitalizacion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTipoDocumentoDigitalizacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarTipoDocumentoDigitalizacionResult" nillable="true" type="q40:ArrayOfSI_TIPO_DOCU_DIGI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetallePlanPorDiario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoDiario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetallePlanPorDiarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDetallePlanPorDiarioResult" nillable="true" type="q41:ArrayOfSI_PLAN_CONT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPlanContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pc_padre" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPlanContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarPlanContableResult" nillable="true" type="q42:ArrayOfSI_PLAN_CONT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarAgencias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarAgenciasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarAgenciasResult" nillable="true" type="q43:ArrayOfSI_AGENCIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarSucursal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoSucursal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarSucursalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarSucursalResult" nillable="true" type="q44:ArrayOfSI_SUCURSAL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarModeloVehiculos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoMarca" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoTipoVehiculo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarModeloVehiculosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarModeloVehiculosResult" nillable="true" type="q45:ArrayOfSI_CATEGORIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarModeloPorGrupoCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreCategoria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="estadoModelo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarModeloPorGrupoCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarModeloPorGrupoCategoriaResult" nillable="true" type="q46:ArrayOfSI_MODELO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosCatalogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="rr_tipo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarParametrosCatalogoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarParametrosCatalogoResult" nillable="true" type="q47:ArrayOfSI_CAMP_REPO_REPU" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNombreCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="estadoCategoria" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNombreCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ConsultarNombreCategoriaResult" nillable="true" type="q48:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarModeloPorCodigoCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCategoria" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarModeloPorCodigoCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarModeloPorCodigoCategoriaResult" nillable="true" type="q49:ArrayOfSI_MODELO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCategoriaPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreCategoria" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCategoriaPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarCategoriaPorNombreResult" nillable="true" type="q50:SI_CATEGORIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCategoriaPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCategoria" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCategoriaPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarCategoriaPorCodigoResult" nillable="true" type="q51:SI_CATEGORIA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarModeloPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoModelo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarModeloPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarModeloPorCodigoResult" nillable="true" type="q52:SI_MODELO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStickerPorCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCliente" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStickerPorClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarStickerPorClienteResult" nillable="true" type="q53:ArrayOfSI_STICKER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStickerPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoSticker" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarStickerPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarStickerPorCodigoResult" nillable="true" type="q54:SI_STICKER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarSticker">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoSticker" nillable="true" type="q55:SI_STICKER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarStickerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="InsertarStickerResult" nillable="true" type="q56:RESPUESTA" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoSticker" nillable="true" type="q57:SI_STICKER" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarTecnicoPorCodigoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoUsuario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarTecnicoPorCodigoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarTecnicoPorCodigoUsuarioResult" nillable="true" type="q58:SI_TECNICO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarVendedoresTipoAuto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:int" />
+        <xs:element minOccurs="0" name="codigoTipoAuto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarVendedoresTipoAutoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarVendedoresTipoAutoResult" nillable="true" type="q59:ArrayOfSI_TECNICO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarVendedorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarVendedorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarVendedorAgenciaResult" nillable="true" type="q60:ArrayOfSI_TECNICO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarUsuarioPorCodigoTecnico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoTecnico" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarUsuarioPorCodigoTecnicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarUsuarioPorCodigoTecnicoResult" nillable="true" type="q61:ArrayOfseg_usuarios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarUsuariosVendedorPorAgencia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarUsuariosVendedorPorAgenciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarUsuariosVendedorPorAgenciaResult" nillable="true" type="q62:ArrayOfseg_usuarios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCanalContactoCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoCanal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperarCanalContactoClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="RecuperarCanalContactoClienteResult" nillable="true" type="q63:ArrayOfSI_CLIE_CANA_CONT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClientePorIdentificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="identificacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClientePorIdentificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarClientePorIdentificacionResult" nillable="true" type="q64:SI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListadoCliente">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListadoClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarListadoClienteResult" nillable="true" type="q65:ArrayOfSI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteAutoUsadoNuevoTotalCTotalV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dato" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteAutoUsadoNuevoTotalCTotalVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarClienteAutoUsadoNuevoTotalCTotalVResult" nillable="true" type="q66:ArrayOfsp_llena_cliente_crm_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteTallerTotalCTotalV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteTallerTotalCTotalVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarClienteTallerTotalCTotalVResult" nillable="true" type="q67:ArrayOfsp_llena_cliente_crm3_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteRepuestoTotalCTotalV">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarClienteRepuestoTotalCTotalVResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarClienteRepuestoTotalCTotalVResult" nillable="true" type="q68:ArrayOfsp_llena_cliente_crm4_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUbicacionGeografica">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUbicacionGeograficaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarUbicacionGeograficaResult" nillable="true" type="q69:ArrayOfSI_UBIC_GEOG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUbicacionGeograficaSect">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarUbicacionGeograficaSectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarUbicacionGeograficaSectResult" nillable="true" type="q70:ArrayOfSI_UBIC_GEOG_SECT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="datosCliente" nillable="true" type="q71:ArrayOfSI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CrearActualizarClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CrearActualizarClienteResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoCliente" nillable="true" type="q72:SI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="InsertarClienteResult" nillable="true" type="q73:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTmCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cl_codigo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarTmClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarTmClienteResult" nillable="true" type="q74:tm_clientes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNotaDebitoActivasPorTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNotaDebitoActivasPorTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarListaNotaDebitoActivasPorTipoResult" nillable="true" type="q75:ArrayOfSI_NOTA_DEBI_VENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNotaDebitoPorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigoPrincipal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNotaDebitoPorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarListaNotaDebitoPorCodigoResult" nillable="true" type="q76:ArrayOfSI_NOTA_DEBI_VENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNotaDebito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroDocumento" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigoPrincipal" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="identificacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoAgencia" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarNotaDebitoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarNotaDebitoResult" nillable="true" type="q77:ArrayOfSI_NOTA_DEBI_VENT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaClientePorNotaCredito">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaClientePorNotaCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarListaClientePorNotaCreditoResult" nillable="true" type="q78:ArrayOfSI_CLIENTE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPorcentajeIva">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPorcentajeIvaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarPorcentajeIvaResult" nillable="true" type="q79:ArrayOfIVA5_PORC_IVA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPlanContablePorCodigo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoPrincipal" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarPlanContablePorCodigoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarPlanContablePorCodigoResult" nillable="true" type="q80:SI_PLAN_CONT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetalleDiarioTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoDetalle" type="xs:decimal" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="lineasDetalle" nillable="true" type="q81:ArrayOfNullableOfshort" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetalleDiarioTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDetalleDiarioTipoResult" nillable="true" type="q82:ArrayOfSI_DETA_DIAR_TIPO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetalleDiarioTipoPorPlanContable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoPlan" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDetalleDiarioTipoPorPlanContableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDetalleDiarioTipoPorPlanContableResult" nillable="true" type="q83:SI_DETA_DIAR_TIPO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProforma">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoProforma" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProformaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarProformaResult" nillable="true" type="q84:SI_PROF_REPU_SERV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PedirNumero">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PedirNumeroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PedirNumeroResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGenerico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="entidad" nillable="true" type="q85:ArrayOfEntidadGenericaGuardar" />
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarGenericoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarGenericoResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarSP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="numero" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutarSPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EjecutarSPResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSPVariosRetornos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="storedProcedure" nillable="true" type="xs:string" />
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="listaParametro" nillable="true" type="q86:ArrayOfPARAMETRO_SQL" />
+        <xs:element xmlns:q87="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listaRetorno" nillable="true" type="q87:ArrayOfstring" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoRespuesta" nillable="true" type="q88:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EjecutaSPVariosRetornosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="EjecutaSPVariosRetornosResult" nillable="true" type="q89:ArrayOfPARAMETRO_RESPUESTA" />
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="objetoRespuesta" nillable="true" type="q90:RESPUESTA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDocumentacionSiac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="parametrosDocumento" nillable="true" type="q91:DocumentoEnvioSiac" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarDocumentacionSiacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="GuardarDocumentacionSiacResult" nillable="true" type="q92:DatosDocumentos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoSiac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoTabla" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoSiacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDocumentoSiacResult" nillable="true" type="q93:ArrayOfDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEmpresa">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEmpresaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarEmpresaResult" nillable="true" type="q94:SI_EMPRESA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCanalPorCampania">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreCampania" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarCanalPorCampaniaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarCanalPorCampaniaResult" nillable="true" type="q95:ArrayOfSI_CLIE_CANA_CONT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaUsuarioGenerico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaUsuarioGenericoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidaUsuarioGenericoResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProcesosCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IN_CODIGO" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarProcesosClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarProcesosClienteResult" nillable="true" type="q96:ArrayOfSI_TORR_CONT_SERV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEvaluacionCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCliente" type="xs:decimal" />
+        <xs:element minOccurs="0" name="stCodigo" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEvaluacionClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarEvaluacionClienteResult" nillable="true" type="q97:SP_CONSULTAR_EVALUACION_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentosConBytes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoTabla" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentosConBytesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDocumentosConBytesResult" nillable="true" type="q98:ArrayOfDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarInventarioIngreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codInventario" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarInventarioIngresoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarInventarioIngresoResult" nillable="true" type="q99:ArrayOfItemGenerico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarProcesoExcelenciaServicios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="consultarProcesoExcelenciaServiciosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="consultarProcesoExcelenciaServiciosResult" nillable="true" type="q100:ArrayOfSI_PROC_EXCE_SERV" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEvaluacionesActivasPorCliente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codCliente" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarEvaluacionesActivasPorClienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarEvaluacionesActivasPorClienteResult" nillable="true" type="q101:ArrayOfSP_CONSULTAR_EVALUACION_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNegocio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codNegocio" type="xs:decimal" />
+        <xs:element minOccurs="0" name="codigoDetaNego" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoTabla" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarListaNegocioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarListaNegocioResult" nillable="true" type="q102:ArrayOfListaNegocio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoBytes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dO_CODIGO" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoBytesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDocumentoBytesResult" nillable="true" type="q103:Documento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoSinBytes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoTabla" type="xs:decimal" />
+        <xs:element minOccurs="0" name="nombreTabla" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultarDocumentoSinBytesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ConsultarDocumentoSinBytesResult" nillable="true" type="q104:ArrayOfDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDocumentoSiac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="parametrosDocumento" nillable="true" type="q105:DocumentoEnvioSiac" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDocumentoSiacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="ActualizarDocumentoSiacResult" nillable="true" type="q106:DatosDocumentos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarDocumentoFSiac">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="us_codigo" type="xs:decimal" />
+        <xs:element minOccurs="0" name="dO_CODIGO" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminarDocumentoFSiacResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" minOccurs="0" name="EliminarDocumentoFSiacResult" nillable="true" type="q107:DatosDocumentos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

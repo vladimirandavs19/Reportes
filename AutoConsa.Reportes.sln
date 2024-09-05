@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoConsa.Reportes.AccesoDatos", "AutoConsa.Reportes.AccesoDatos\AutoConsa.Reportes.AccesoDatos.csproj", "{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoConsa.Reportes.Entidades", "AutoConsa.Reportes.Entidades\AutoConsa.Reportes.Entidades.csproj", "{26E99CB6-66F0-484B-970C-A4DF5DAA467C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoConsa.Reportes.LogicaNegocio", "AutoConsa.Reportes.LogicaNegocio\AutoConsa.Reportes.LogicaNegocio.csproj", "{47627024-BBD6-4BDB-94C8-7F672E97844B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoConsa.Reportes.Presentacion", "AutoConsa.Reportes.Presentacion\AutoConsa.Reportes.Presentacion.csproj", "{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoConsa.Reportes.Proxy", "AutoConsa.Reportes.Proxy\AutoConsa.Reportes.Proxy.csproj", "{50635385-62AD-48DF-9C32-633C631C090A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://uiomatsvrdes1/automotores%20continental
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = AutoConsa.Reportes.AccesoDatos\\AutoConsa.Reportes.AccesoDatos.csproj
+		SccProjectName1 = AutoConsa.Reportes.AccesoDatos
+		SccLocalPath1 = AutoConsa.Reportes.AccesoDatos
+		SccProjectUniqueName2 = AutoConsa.Reportes.Entidades\\AutoConsa.Reportes.Entidades.csproj
+		SccProjectName2 = AutoConsa.Reportes.Entidades
+		SccLocalPath2 = AutoConsa.Reportes.Entidades
+		SccProjectUniqueName3 = AutoConsa.Reportes.LogicaNegocio\\AutoConsa.Reportes.LogicaNegocio.csproj
+		SccProjectName3 = AutoConsa.Reportes.LogicaNegocio
+		SccLocalPath3 = AutoConsa.Reportes.LogicaNegocio
+		SccProjectUniqueName4 = AutoConsa.Reportes.Presentacion\\AutoConsa.Reportes.Presentacion.csproj
+		SccProjectName4 = AutoConsa.Reportes.Presentacion
+		SccLocalPath4 = AutoConsa.Reportes.Presentacion
+		SccProjectUniqueName5 = AutoConsa.Reportes.Proxy\\AutoConsa.Reportes.Proxy.csproj
+		SccProjectName5 = AutoConsa.Reportes.Proxy
+		SccLocalPath5 = AutoConsa.Reportes.Proxy
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EcuaAuto|Any CPU = EcuaAuto|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.EcuaAuto|Any CPU.ActiveCfg = EcuaAuto|Any CPU
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.EcuaAuto|Any CPU.Build.0 = EcuaAuto|Any CPU
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F3AD72-3088-4C7C-B900-EF0BC0AE65A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.EcuaAuto|Any CPU.ActiveCfg = EcuaAuto|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.EcuaAuto|Any CPU.Build.0 = EcuaAuto|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E99CB6-66F0-484B-970C-A4DF5DAA467C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.EcuaAuto|Any CPU.ActiveCfg = EcuaAuto|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.EcuaAuto|Any CPU.Build.0 = EcuaAuto|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47627024-BBD6-4BDB-94C8-7F672E97844B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.EcuaAuto|Any CPU.ActiveCfg = EcuaAuto|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.EcuaAuto|Any CPU.Build.0 = EcuaAuto|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C71E1E-9106-4EE8-B8F0-7BDE1C935D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.EcuaAuto|Any CPU.ActiveCfg = Release|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.EcuaAuto|Any CPU.Build.0 = Release|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50635385-62AD-48DF-9C32-633C631C090A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d0c8e82-d458-4234-a3fa-9a33228093e2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Catalogo.xsd" MetadataType="Schema" ID="515cc67d-7e6b-454e-aff8-d67f14275809" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd4" />
+    <MetadataFile FileName="Catalogo1.xsd" MetadataType="Schema" ID="405c9b43-7ce4-45d5-a8eb-9378b215abc3" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd5" />
+    <MetadataFile FileName="Catalogo2.xsd" MetadataType="Schema" ID="028e7f08-7541-488b-914e-b6d97b59b253" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd2" />
+    <MetadataFile FileName="Catalogo3.xsd" MetadataType="Schema" ID="2e8779cc-6769-4980-8064-a727a7f135e9" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd3" />
+    <MetadataFile FileName="Catalogo4.xsd" MetadataType="Schema" ID="da66f1f0-8105-42e0-abb1-478ba85dff99" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd0" />
+    <MetadataFile FileName="Catalogo5.xsd" MetadataType="Schema" ID="26a37443-1230-4fe9-9706-28a86e6f954b" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd1" />
+    <MetadataFile FileName="Catalogo.disco" MetadataType="Disco" ID="51df2db3-4901-4780-bf49-2de819d35544" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?disco" />
+    <MetadataFile FileName="Catalogo.wsdl" MetadataType="Wsdl" ID="4321cb14-f21e-4c8b-a96d-4117e5e753cf" SourceId="1" SourceUrl="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,2631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Catalogo" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_ICatalogo_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AutoConsa.SiacWeb.Entidades.Asp" />
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICatalogo_InsertarProveedorDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProveedorDias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarProveedorDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProveedorDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarProveedorDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorDias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarProveedorDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerCedRuc_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCedRuc" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerCedRuc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCedRucResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDiasNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDiasNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDiasNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDiasNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDiasIdentificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDiasIdentificacion" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorDiasIdentificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorDiasIdentificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerListaProveedorDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaProveedorDias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerListaProveedorDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListaProveedorDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorIdentificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorIdentificacion" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorIdentificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorIdentificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtieneProveedorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneProveedorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtieneProveedorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtieneProveedorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProveedorPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedorPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProveedorPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedorPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerEmpresasXml_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasXml" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerEmpresasXml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerEmpresasXmlPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasXmlPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerEmpresasXmlPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEmpresasXmlPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminaRegistro_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRegistro" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminaRegistro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminaRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizaRegistro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaRegistro" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizaRegistro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizaRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertaRegistro_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaRegistro" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertaRegistro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaRegistroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorPorIdentificacionNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorIdentificacionNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorPorIdentificacionNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorIdentificacionNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerProveedorPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProveedorPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerClientePorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerClientePorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerClientePorIdentificacionNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorIdentificacionNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerClientePorIdentificacionNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClientePorIdentificacionNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerExportador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExportador" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ObtenerExportador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerExportadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarClienteExportador_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClienteExportador" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarClienteExportador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClienteExportadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarClienteExportador_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarClienteExportador" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarClienteExportador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarClienteExportadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarProveedorDias_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProveedorDias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarProveedorDias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarProveedorDiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarAgencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProveedorDiasPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedorDiasPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProveedorDiasPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProveedorDiasPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCajaPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCajaPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCajaPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCajaPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCentroCosto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCentroCosto" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCentroCosto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCentroCostoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarParametrosGenerales_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosGenerales" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarParametrosGenerales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosGeneralesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarTipoDocumentoDigitalizacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTipoDocumentoDigitalizacion" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarTipoDocumentoDigitalizacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTipoDocumentoDigitalizacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetallePlanPorDiario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetallePlanPorDiario" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetallePlanPorDiario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetallePlanPorDiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPlanContable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlanContable" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPlanContable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlanContableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarAgencias_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarAgencias" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarAgencias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarAgenciasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarSucursal_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarSucursal" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarSucursal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarModeloVehiculos_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarModeloVehiculos" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarModeloVehiculos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarModeloVehiculosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarModeloPorGrupoCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModeloPorGrupoCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarModeloPorGrupoCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModeloPorGrupoCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarParametrosCatalogo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosCatalogo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarParametrosCatalogo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarParametrosCatalogoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarNombreCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNombreCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarNombreCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNombreCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarModeloPorCodigoCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarModeloPorCodigoCategoria" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarModeloPorCodigoCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarModeloPorCodigoCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCategoriaPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCategoriaPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCategoriaPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCategoriaPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCategoriaPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCategoriaPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCategoriaPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCategoriaPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarModeloPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModeloPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarModeloPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarModeloPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarStickerPorCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStickerPorCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarStickerPorCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStickerPorClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarStickerPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStickerPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarStickerPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarStickerPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarSticker_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarSticker" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarSticker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarStickerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarTecnicoPorCodigoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarTecnicoPorCodigoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarTecnicoPorCodigoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarTecnicoPorCodigoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarVendedoresTipoAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarVendedoresTipoAuto" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarVendedoresTipoAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarVendedoresTipoAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarVendedorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarVendedorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarVendedorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarVendedorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarUsuarioPorCodigoTecnico_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuarioPorCodigoTecnico" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarUsuarioPorCodigoTecnico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuarioPorCodigoTecnicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarUsuariosVendedorPorAgencia_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuariosVendedorPorAgencia" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarUsuariosVendedorPorAgencia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarUsuariosVendedorPorAgenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCanalContactoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCanalContactoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_RecuperarCanalContactoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperarCanalContactoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClientePorIdentificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClientePorIdentificacion" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClientePorIdentificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClientePorIdentificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListadoCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListadoCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListadoCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListadoClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteAutoUsadoNuevoTotalCTotalV_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteAutoUsadoNuevoTotalCTotalV" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteAutoUsadoNuevoTotalCTotalV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteAutoUsadoNuevoTotalCTotalVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteTallerTotalCTotalV_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteTallerTotalCTotalV" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteTallerTotalCTotalV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteTallerTotalCTotalVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteRepuestoTotalCTotalV_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteRepuestoTotalCTotalV" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarClienteRepuestoTotalCTotalV_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarClienteRepuestoTotalCTotalVResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarUbicacionGeografica_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUbicacionGeografica" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarUbicacionGeografica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUbicacionGeograficaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarUbicacionGeograficaSect_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUbicacionGeograficaSect" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarUbicacionGeograficaSect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarUbicacionGeograficaSectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_CrearActualizarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_CrearActualizarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearActualizarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_InsertarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarTmCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTmCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarTmCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarTmClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNotaDebitoActivasPorTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNotaDebitoActivasPorTipo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNotaDebitoActivasPorTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNotaDebitoActivasPorTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNotaDebitoPorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNotaDebitoPorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNotaDebitoPorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNotaDebitoPorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarNotaDebito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaDebito" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarNotaDebito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarNotaDebitoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaClientePorNotaCredito_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaClientePorNotaCredito" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaClientePorNotaCredito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaClientePorNotaCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPorcentajeIva_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPorcentajeIva" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPorcentajeIva_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPorcentajeIvaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPlanContablePorCodigo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlanContablePorCodigo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarPlanContablePorCodigo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarPlanContablePorCodigoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetalleDiarioTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetalleDiarioTipo" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetalleDiarioTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetalleDiarioTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetalleDiarioTipoPorPlanContable_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetalleDiarioTipoPorPlanContable" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDetalleDiarioTipoPorPlanContable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDetalleDiarioTipoPorPlanContableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProforma_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProforma" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProforma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProformaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_PedirNumero_InputMessage">
+    <wsdl:part name="parameters" element="tns:PedirNumero" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_PedirNumero_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PedirNumeroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_GuardarGenerico_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarGenerico" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_GuardarGenerico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarGenericoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EjecutarSP_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarSP" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EjecutarSP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutarSPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EjecutaSPVariosRetornos_InputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSPVariosRetornos" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EjecutaSPVariosRetornos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EjecutaSPVariosRetornosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_GuardarDocumentacionSiac_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDocumentacionSiac" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_GuardarDocumentacionSiac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarDocumentacionSiacResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoSiac_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoSiac" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoSiac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoSiacResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEmpresa_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEmpresa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCanalPorCampania_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCanalPorCampania" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarCanalPorCampania_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarCanalPorCampaniaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ValidaUsuarioGenerico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioGenerico" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ValidaUsuarioGenerico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaUsuarioGenericoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProcesosCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProcesosCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarProcesosCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarProcesosClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEvaluacionCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEvaluacionCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEvaluacionCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEvaluacionClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentosConBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentosConBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentosConBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentosConBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarInventarioIngreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarInventarioIngreso" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarInventarioIngreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarInventarioIngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_consultarProcesoExcelenciaServicios_InputMessage">
+    <wsdl:part name="parameters" element="tns:consultarProcesoExcelenciaServicios" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_consultarProcesoExcelenciaServicios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultarProcesoExcelenciaServiciosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEvaluacionesActivasPorCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEvaluacionesActivasPorCliente" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarEvaluacionesActivasPorCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarEvaluacionesActivasPorClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNegocio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNegocio" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarListaNegocio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarListaNegocioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoSinBytes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoSinBytes" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ConsultarDocumentoSinBytes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultarDocumentoSinBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarDocumentoSiac_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDocumentoSiac" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_ActualizarDocumentoSiac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDocumentoSiacResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarDocumentoFSiac_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoFSiac" />
+  </wsdl:message>
+  <wsdl:message name="ICatalogo_EliminarDocumentoFSiac_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarDocumentoFSiacResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICatalogo">
+    <wsdl:operation name="InsertarProveedorDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/InsertarProveedorDias" message="tns:ICatalogo_InsertarProveedorDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/InsertarProveedorDiasResponse" message="tns:ICatalogo_InsertarProveedorDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ActualizarProveedorDias" message="tns:ICatalogo_ActualizarProveedorDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ActualizarProveedorDiasResponse" message="tns:ICatalogo_ActualizarProveedorDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDias" message="tns:ICatalogo_ObtenerProveedorDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDiasResponse" message="tns:ICatalogo_ObtenerProveedorDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedor" message="tns:ICatalogo_ObtenerProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorResponse" message="tns:ICatalogo_ObtenerProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCedRuc">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerCedRuc" message="tns:ICatalogo_ObtenerCedRuc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerCedRucResponse" message="tns:ICatalogo_ObtenerCedRuc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDiasNombre" message="tns:ICatalogo_ObtenerProveedorDiasNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDiasNombreResponse" message="tns:ICatalogo_ObtenerProveedorDiasNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasIdentificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDiasIdentificacion" message="tns:ICatalogo_ObtenerProveedorDiasIdentificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorDiasIdentificacionResponse" message="tns:ICatalogo_ObtenerProveedorDiasIdentificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaProveedorDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerListaProveedorDias" message="tns:ICatalogo_ObtenerListaProveedorDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerListaProveedorDiasResponse" message="tns:ICatalogo_ObtenerListaProveedorDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorIdentificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorIdentificacion" message="tns:ICatalogo_ObtenerProveedorIdentificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorIdentificacionResponse" message="tns:ICatalogo_ObtenerProveedorIdentificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProveedorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtieneProveedorNombre" message="tns:ICatalogo_ObtieneProveedorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtieneProveedorNombreResponse" message="tns:ICatalogo_ObtieneProveedorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProveedorPorCodigo" message="tns:ICatalogo_ConsultarProveedorPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProveedorPorCodigoResponse" message="tns:ICatalogo_ConsultarProveedorPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXml">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerEmpresasXml" message="tns:ICatalogo_ObtenerEmpresasXml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerEmpresasXmlResponse" message="tns:ICatalogo_ObtenerEmpresasXml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXmlPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerEmpresasXmlPorCodigo" message="tns:ICatalogo_ObtenerEmpresasXmlPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerEmpresasXmlPorCodigoResponse" message="tns:ICatalogo_ObtenerEmpresasXmlPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRegistro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EliminaRegistro" message="tns:ICatalogo_EliminaRegistro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EliminaRegistroResponse" message="tns:ICatalogo_EliminaRegistro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRegistro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ActualizaRegistro" message="tns:ICatalogo_ActualizaRegistro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ActualizaRegistroResponse" message="tns:ICatalogo_ActualizaRegistro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRegistro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/InsertaRegistro" message="tns:ICatalogo_InsertaRegistro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/InsertaRegistroResponse" message="tns:ICatalogo_InsertaRegistro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorIdentificacionNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorPorIdentificacionNombre" message="tns:ICatalogo_ObtenerProveedorPorIdentificacionNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorPorIdentificacionNombreResponse" message="tns:ICatalogo_ObtenerProveedorPorIdentificacionNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorPorCodigo" message="tns:ICatalogo_ObtenerProveedorPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerProveedorPorCodigoResponse" message="tns:ICatalogo_ObtenerProveedorPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerClientePorCodigo" message="tns:ICatalogo_ObtenerClientePorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerClientePorCodigoResponse" message="tns:ICatalogo_ObtenerClientePorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdentificacionNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerClientePorIdentificacionNombre" message="tns:ICatalogo_ObtenerClientePorIdentificacionNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerClientePorIdentificacionNombreResponse" message="tns:ICatalogo_ObtenerClientePorIdentificacionNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCliente" message="tns:ICatalogo_ConsultarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteResponse" message="tns:ICatalogo_ConsultarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExportador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ObtenerExportador" message="tns:ICatalogo_ObtenerExportador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ObtenerExportadorResponse" message="tns:ICatalogo_ObtenerExportador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClienteExportador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/InsertarClienteExportador" message="tns:ICatalogo_InsertarClienteExportador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/InsertarClienteExportadorResponse" message="tns:ICatalogo_InsertarClienteExportador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarClienteExportador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EliminarClienteExportador" message="tns:ICatalogo_EliminarClienteExportador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EliminarClienteExportadorResponse" message="tns:ICatalogo_EliminarClienteExportador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProveedorDias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EliminarProveedorDias" message="tns:ICatalogo_EliminarProveedorDias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EliminarProveedorDiasResponse" message="tns:ICatalogo_EliminarProveedorDias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ActualizarProveedor" message="tns:ICatalogo_ActualizarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ActualizarProveedorResponse" message="tns:ICatalogo_ActualizarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAgencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarAgencia" message="tns:ICatalogo_ConsultarAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarAgenciaResponse" message="tns:ICatalogo_ConsultarAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorDiasPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProveedorDiasPorCodigo" message="tns:ICatalogo_ConsultarProveedorDiasPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProveedorDiasPorCodigoResponse" message="tns:ICatalogo_ConsultarProveedorDiasPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCajaPorAgencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCajaPorAgencia" message="tns:ICatalogo_ConsultarCajaPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCajaPorAgenciaResponse" message="tns:ICatalogo_ConsultarCajaPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCentroCosto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCentroCosto" message="tns:ICatalogo_ConsultarCentroCosto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCentroCostoResponse" message="tns:ICatalogo_ConsultarCentroCosto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosGenerales">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarParametrosGenerales" message="tns:ICatalogo_ConsultarParametrosGenerales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarParametrosGeneralesResponse" message="tns:ICatalogo_ConsultarParametrosGenerales_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoDocumentoDigitalizacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarTipoDocumentoDigitalizacion" message="tns:ICatalogo_ConsultarTipoDocumentoDigitalizacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarTipoDocumentoDigitalizacionResponse" message="tns:ICatalogo_ConsultarTipoDocumentoDigitalizacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetallePlanPorDiario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetallePlanPorDiario" message="tns:ICatalogo_ConsultarDetallePlanPorDiario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetallePlanPorDiarioResponse" message="tns:ICatalogo_ConsultarDetallePlanPorDiario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPlanContable" message="tns:ICatalogo_ConsultarPlanContable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPlanContableResponse" message="tns:ICatalogo_ConsultarPlanContable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarAgencias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarAgencias" message="tns:ICatalogo_RecuperarAgencias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarAgenciasResponse" message="tns:ICatalogo_RecuperarAgencias_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSucursal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarSucursal" message="tns:ICatalogo_RecuperarSucursal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarSucursalResponse" message="tns:ICatalogo_RecuperarSucursal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloVehiculos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarModeloVehiculos" message="tns:ICatalogo_RecuperarModeloVehiculos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarModeloVehiculosResponse" message="tns:ICatalogo_RecuperarModeloVehiculos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorGrupoCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarModeloPorGrupoCategoria" message="tns:ICatalogo_ConsultarModeloPorGrupoCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarModeloPorGrupoCategoriaResponse" message="tns:ICatalogo_ConsultarModeloPorGrupoCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosCatalogo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarParametrosCatalogo" message="tns:ICatalogo_ConsultarParametrosCatalogo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarParametrosCatalogoResponse" message="tns:ICatalogo_ConsultarParametrosCatalogo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNombreCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarNombreCategoria" message="tns:ICatalogo_ConsultarNombreCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarNombreCategoriaResponse" message="tns:ICatalogo_ConsultarNombreCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloPorCodigoCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarModeloPorCodigoCategoria" message="tns:ICatalogo_RecuperarModeloPorCodigoCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarModeloPorCodigoCategoriaResponse" message="tns:ICatalogo_RecuperarModeloPorCodigoCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCategoriaPorNombre" message="tns:ICatalogo_RecuperarCategoriaPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCategoriaPorNombreResponse" message="tns:ICatalogo_RecuperarCategoriaPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCategoriaPorCodigo" message="tns:ICatalogo_RecuperarCategoriaPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCategoriaPorCodigoResponse" message="tns:ICatalogo_RecuperarCategoriaPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarModeloPorCodigo" message="tns:ICatalogo_ConsultarModeloPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarModeloPorCodigoResponse" message="tns:ICatalogo_ConsultarModeloPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarStickerPorCliente" message="tns:ICatalogo_ConsultarStickerPorCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarStickerPorClienteResponse" message="tns:ICatalogo_ConsultarStickerPorCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarStickerPorCodigo" message="tns:ICatalogo_ConsultarStickerPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarStickerPorCodigoResponse" message="tns:ICatalogo_ConsultarStickerPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSticker">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/InsertarSticker" message="tns:ICatalogo_InsertarSticker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/InsertarStickerResponse" message="tns:ICatalogo_InsertarSticker_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTecnicoPorCodigoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarTecnicoPorCodigoUsuario" message="tns:ICatalogo_RecuperarTecnicoPorCodigoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarTecnicoPorCodigoUsuarioResponse" message="tns:ICatalogo_RecuperarTecnicoPorCodigoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedoresTipoAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarVendedoresTipoAuto" message="tns:ICatalogo_RecuperarVendedoresTipoAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarVendedoresTipoAutoResponse" message="tns:ICatalogo_RecuperarVendedoresTipoAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedorAgencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarVendedorAgencia" message="tns:ICatalogo_RecuperarVendedorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarVendedorAgenciaResponse" message="tns:ICatalogo_RecuperarVendedorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarioPorCodigoTecnico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarUsuarioPorCodigoTecnico" message="tns:ICatalogo_RecuperarUsuarioPorCodigoTecnico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarUsuarioPorCodigoTecnicoResponse" message="tns:ICatalogo_RecuperarUsuarioPorCodigoTecnico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuariosVendedorPorAgencia">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarUsuariosVendedorPorAgencia" message="tns:ICatalogo_RecuperarUsuariosVendedorPorAgencia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarUsuariosVendedorPorAgenciaResponse" message="tns:ICatalogo_RecuperarUsuariosVendedorPorAgencia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCanalContactoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCanalContactoCliente" message="tns:ICatalogo_RecuperarCanalContactoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/RecuperarCanalContactoClienteResponse" message="tns:ICatalogo_RecuperarCanalContactoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientePorIdentificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClientePorIdentificacion" message="tns:ICatalogo_ConsultarClientePorIdentificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClientePorIdentificacionResponse" message="tns:ICatalogo_ConsultarClientePorIdentificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListadoCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListadoCliente" message="tns:ICatalogo_ConsultarListadoCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListadoClienteResponse" message="tns:ICatalogo_ConsultarListadoCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteAutoUsadoNuevoTotalCTotalV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteAutoUsadoNuevoTotalCTotalV" message="tns:ICatalogo_ConsultarClienteAutoUsadoNuevoTotalCTotalV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteAutoUsadoNuevoTotalCTotalVResponse" message="tns:ICatalogo_ConsultarClienteAutoUsadoNuevoTotalCTotalV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteTallerTotalCTotalV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteTallerTotalCTotalV" message="tns:ICatalogo_ConsultarClienteTallerTotalCTotalV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteTallerTotalCTotalVResponse" message="tns:ICatalogo_ConsultarClienteTallerTotalCTotalV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteRepuestoTotalCTotalV">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteRepuestoTotalCTotalV" message="tns:ICatalogo_ConsultarClienteRepuestoTotalCTotalV_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarClienteRepuestoTotalCTotalVResponse" message="tns:ICatalogo_ConsultarClienteRepuestoTotalCTotalV_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeografica">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarUbicacionGeografica" message="tns:ICatalogo_ConsultarUbicacionGeografica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarUbicacionGeograficaResponse" message="tns:ICatalogo_ConsultarUbicacionGeografica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeograficaSect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarUbicacionGeograficaSect" message="tns:ICatalogo_ConsultarUbicacionGeograficaSect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarUbicacionGeograficaSectResponse" message="tns:ICatalogo_ConsultarUbicacionGeograficaSect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/CrearActualizarCliente" message="tns:ICatalogo_CrearActualizarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/CrearActualizarClienteResponse" message="tns:ICatalogo_CrearActualizarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/InsertarCliente" message="tns:ICatalogo_InsertarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/InsertarClienteResponse" message="tns:ICatalogo_InsertarCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTmCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarTmCliente" message="tns:ICatalogo_ConsultarTmCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarTmClienteResponse" message="tns:ICatalogo_ConsultarTmCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoActivasPorTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoActivasPorTipo" message="tns:ICatalogo_ConsultarListaNotaDebitoActivasPorTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoActivasPorTipoResponse" message="tns:ICatalogo_ConsultarListaNotaDebitoActivasPorTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoPorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoPorCodigo" message="tns:ICatalogo_ConsultarListaNotaDebitoPorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoPorCodigoResponse" message="tns:ICatalogo_ConsultarListaNotaDebitoPorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaDebito">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarNotaDebito" message="tns:ICatalogo_ConsultarNotaDebito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarNotaDebitoResponse" message="tns:ICatalogo_ConsultarNotaDebito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaClientePorNotaCredito">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaClientePorNotaCredito" message="tns:ICatalogo_ConsultarListaClientePorNotaCredito_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaClientePorNotaCreditoResponse" message="tns:ICatalogo_ConsultarListaClientePorNotaCredito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPorcentajeIva">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPorcentajeIva" message="tns:ICatalogo_ConsultarPorcentajeIva_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPorcentajeIvaResponse" message="tns:ICatalogo_ConsultarPorcentajeIva_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContablePorCodigo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPlanContablePorCodigo" message="tns:ICatalogo_ConsultarPlanContablePorCodigo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarPlanContablePorCodigoResponse" message="tns:ICatalogo_ConsultarPlanContablePorCodigo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipo" message="tns:ICatalogo_ConsultarDetalleDiarioTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipoResponse" message="tns:ICatalogo_ConsultarDetalleDiarioTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipoPorPlanContable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipoPorPlanContable" message="tns:ICatalogo_ConsultarDetalleDiarioTipoPorPlanContable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipoPorPlanContableResponse" message="tns:ICatalogo_ConsultarDetalleDiarioTipoPorPlanContable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProforma">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProforma" message="tns:ICatalogo_ConsultarProforma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProformaResponse" message="tns:ICatalogo_ConsultarProforma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PedirNumero">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/PedirNumero" message="tns:ICatalogo_PedirNumero_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/PedirNumeroResponse" message="tns:ICatalogo_PedirNumero_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarGenerico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/GuardarGenerico" message="tns:ICatalogo_GuardarGenerico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/GuardarGenericoResponse" message="tns:ICatalogo_GuardarGenerico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarSP">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EjecutarSP" message="tns:ICatalogo_EjecutarSP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EjecutarSPResponse" message="tns:ICatalogo_EjecutarSP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSPVariosRetornos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EjecutaSPVariosRetornos" message="tns:ICatalogo_EjecutaSPVariosRetornos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EjecutaSPVariosRetornosResponse" message="tns:ICatalogo_EjecutaSPVariosRetornos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDocumentacionSiac">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/GuardarDocumentacionSiac" message="tns:ICatalogo_GuardarDocumentacionSiac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/GuardarDocumentacionSiacResponse" message="tns:ICatalogo_GuardarDocumentacionSiac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSiac">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoSiac" message="tns:ICatalogo_ConsultarDocumentoSiac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoSiacResponse" message="tns:ICatalogo_ConsultarDocumentoSiac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEmpresa">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEmpresa" message="tns:ICatalogo_ConsultarEmpresa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEmpresaResponse" message="tns:ICatalogo_ConsultarEmpresa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCanalPorCampania">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCanalPorCampania" message="tns:ICatalogo_ConsultarCanalPorCampania_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarCanalPorCampaniaResponse" message="tns:ICatalogo_ConsultarCanalPorCampania_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuarioGenerico">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ValidaUsuarioGenerico" message="tns:ICatalogo_ValidaUsuarioGenerico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ValidaUsuarioGenericoResponse" message="tns:ICatalogo_ValidaUsuarioGenerico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProcesosCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProcesosCliente" message="tns:ICatalogo_ConsultarProcesosCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarProcesosClienteResponse" message="tns:ICatalogo_ConsultarProcesosCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEvaluacionCliente" message="tns:ICatalogo_ConsultarEvaluacionCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEvaluacionClienteResponse" message="tns:ICatalogo_ConsultarEvaluacionCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentosConBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentosConBytes" message="tns:ICatalogo_ConsultarDocumentosConBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentosConBytesResponse" message="tns:ICatalogo_ConsultarDocumentosConBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarInventarioIngreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarInventarioIngreso" message="tns:ICatalogo_ConsultarInventarioIngreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarInventarioIngresoResponse" message="tns:ICatalogo_ConsultarInventarioIngreso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarProcesoExcelenciaServicios">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/consultarProcesoExcelenciaServicios" message="tns:ICatalogo_consultarProcesoExcelenciaServicios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/consultarProcesoExcelenciaServiciosResponse" message="tns:ICatalogo_consultarProcesoExcelenciaServicios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionesActivasPorCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEvaluacionesActivasPorCliente" message="tns:ICatalogo_ConsultarEvaluacionesActivasPorCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarEvaluacionesActivasPorClienteResponse" message="tns:ICatalogo_ConsultarEvaluacionesActivasPorCliente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNegocio">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNegocio" message="tns:ICatalogo_ConsultarListaNegocio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarListaNegocioResponse" message="tns:ICatalogo_ConsultarListaNegocio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoBytes" message="tns:ICatalogo_ConsultarDocumentoBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoBytesResponse" message="tns:ICatalogo_ConsultarDocumentoBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSinBytes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoSinBytes" message="tns:ICatalogo_ConsultarDocumentoSinBytes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ConsultarDocumentoSinBytesResponse" message="tns:ICatalogo_ConsultarDocumentoSinBytes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDocumentoSiac">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/ActualizarDocumentoSiac" message="tns:ICatalogo_ActualizarDocumentoSiac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/ActualizarDocumentoSiacResponse" message="tns:ICatalogo_ActualizarDocumentoSiac_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumentoFSiac">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICatalogo/EliminarDocumentoFSiac" message="tns:ICatalogo_EliminarDocumentoFSiac_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICatalogo/EliminarDocumentoFSiacResponse" message="tns:ICatalogo_EliminarDocumentoFSiac_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICatalogo" type="tns:ICatalogo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCedRuc">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerCedRuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDiasNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDiasIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerListaProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProveedorNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtieneProveedorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProveedorPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXml">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerEmpresasXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXmlPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerEmpresasXmlPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorIdentificacionNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorPorIdentificacionNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerClientePorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdentificacionNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerClientePorIdentificacionNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClienteExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarClienteExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarClienteExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarClienteExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorDiasPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProveedorDiasPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCajaPorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCajaPorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCentroCosto">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCentroCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosGenerales">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarParametrosGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoDocumentoDigitalizacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarTipoDocumentoDigitalizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetallePlanPorDiario">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetallePlanPorDiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContable">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPlanContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarAgencias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarAgencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloVehiculos">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarModeloVehiculos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorGrupoCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarModeloPorGrupoCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarParametrosCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNombreCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarNombreCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloPorCodigoCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarModeloPorCodigoCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCategoriaPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCategoriaPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarModeloPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarStickerPorCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarStickerPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSticker">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarSticker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTecnicoPorCodigoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarTecnicoPorCodigoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedoresTipoAuto">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarVendedoresTipoAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarVendedorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarioPorCodigoTecnico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarUsuarioPorCodigoTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuariosVendedorPorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarUsuariosVendedorPorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCanalContactoCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCanalContactoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientePorIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClientePorIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListadoCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListadoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteAutoUsadoNuevoTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteAutoUsadoNuevoTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteTallerTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteTallerTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteRepuestoTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteRepuestoTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeografica">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarUbicacionGeografica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeograficaSect">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarUbicacionGeograficaSect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/CrearActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTmCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarTmCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoActivasPorTipo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoActivasPorTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaDebito">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarNotaDebito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaClientePorNotaCredito">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaClientePorNotaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPorcentajeIva">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPorcentajeIva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContablePorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPlanContablePorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipoPorPlanContable">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipoPorPlanContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProforma">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProforma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PedirNumero">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/PedirNumero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarGenerico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/GuardarGenerico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarSP">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EjecutarSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSPVariosRetornos">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EjecutaSPVariosRetornos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDocumentacionSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/GuardarDocumentacionSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCanalPorCampania">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCanalPorCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuarioGenerico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ValidaUsuarioGenerico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProcesosCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProcesosCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEvaluacionCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentosConBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentosConBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarInventarioIngreso">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarInventarioIngreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProcesoExcelenciaServicios">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/consultarProcesoExcelenciaServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionesActivasPorCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEvaluacionesActivasPorCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNegocio">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNegocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSinBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoSinBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDocumentoSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarDocumentoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumentoFSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarDocumentoFSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpsBinding_ICatalogo" type="tns:ICatalogo">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_ICatalogo_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedor">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCedRuc">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerCedRuc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDiasNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorDiasIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorDiasIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListaProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerListaProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtieneProveedorNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtieneProveedorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProveedorPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXml">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerEmpresasXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEmpresasXmlPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerEmpresasXmlPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaRegistro">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertaRegistro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorIdentificacionNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorPorIdentificacionNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProveedorPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerProveedorPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerClientePorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClientePorIdentificacionNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerClientePorIdentificacionNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ObtenerExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarClienteExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarClienteExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarClienteExportador">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarClienteExportador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarProveedorDias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarProveedorDias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProveedorDiasPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProveedorDiasPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCajaPorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCajaPorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCentroCosto">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCentroCosto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosGenerales">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarParametrosGenerales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTipoDocumentoDigitalizacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarTipoDocumentoDigitalizacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetallePlanPorDiario">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetallePlanPorDiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContable">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPlanContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarAgencias">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarAgencias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarSucursal">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloVehiculos">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarModeloVehiculos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorGrupoCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarModeloPorGrupoCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarParametrosCatalogo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarParametrosCatalogo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNombreCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarNombreCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarModeloPorCodigoCategoria">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarModeloPorCodigoCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorNombre">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCategoriaPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCategoriaPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCategoriaPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarModeloPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarModeloPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarStickerPorCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarStickerPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarStickerPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarSticker">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarSticker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarTecnicoPorCodigoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarTecnicoPorCodigoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedoresTipoAuto">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarVendedoresTipoAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarVendedorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarVendedorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuarioPorCodigoTecnico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarUsuarioPorCodigoTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarUsuariosVendedorPorAgencia">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarUsuariosVendedorPorAgencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarCanalContactoCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/RecuperarCanalContactoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClientePorIdentificacion">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClientePorIdentificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListadoCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListadoCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteAutoUsadoNuevoTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteAutoUsadoNuevoTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteTallerTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteTallerTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarClienteRepuestoTotalCTotalV">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarClienteRepuestoTotalCTotalV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeografica">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarUbicacionGeografica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarUbicacionGeograficaSect">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarUbicacionGeograficaSect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/CrearActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/InsertarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarTmCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarTmCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoActivasPorTipo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoActivasPorTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNotaDebitoPorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNotaDebitoPorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarNotaDebito">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarNotaDebito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaClientePorNotaCredito">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaClientePorNotaCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPorcentajeIva">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPorcentajeIva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarPlanContablePorCodigo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarPlanContablePorCodigo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipo">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDetalleDiarioTipoPorPlanContable">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDetalleDiarioTipoPorPlanContable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProforma">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProforma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PedirNumero">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/PedirNumero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarGenerico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/GuardarGenerico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutarSP">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EjecutarSP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EjecutaSPVariosRetornos">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EjecutaSPVariosRetornos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarDocumentacionSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/GuardarDocumentacionSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarCanalPorCampania">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarCanalPorCampania" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaUsuarioGenerico">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ValidaUsuarioGenerico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarProcesosCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarProcesosCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEvaluacionCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentosConBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentosConBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarInventarioIngreso">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarInventarioIngreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarProcesoExcelenciaServicios">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/consultarProcesoExcelenciaServicios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarEvaluacionesActivasPorCliente">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarEvaluacionesActivasPorCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarListaNegocio">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarListaNegocio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDocumentoSinBytes">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ConsultarDocumentoSinBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDocumentoSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/ActualizarDocumentoSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarDocumentoFSiac">
+      <soap:operation soapAction="http://tempuri.org/ICatalogo/EliminarDocumentoFSiac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Catalogo">
+    <wsdl:port name="BasicHttpBinding_ICatalogo" binding="tns:BasicHttpBinding_ICatalogo">
+      <soap:address location="http://192.168.0.130/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpsBinding_ICatalogo" binding="tns:BasicHttpsBinding_ICatalogo">
+      <soap:address location="https://uiomatsvrweb2.autoconti.com/Publicacion.Siac.Web.EcuaAuto/Servicios/Catalogo.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
